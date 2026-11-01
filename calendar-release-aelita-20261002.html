@@ -2417,8 +2417,8 @@ html.theme-light .astro-day-panel { background: #f3f6f1; color: #19302d; border-
             if (!intervalOnDay(period, isoDate)) continue;
             let message = 'Ретроградный Меркурий: проверять договорённости, адреса и документы; полезно возвращаться к незавершённому. ' +
                 'Поездки и сделки не запрещены: перепроверять условия и оставлять запас времени.';
-            if (localDate(period.start_utc) === isoDate) message += ` Начало: ${localTime(period.start_utc)}.`;
-            if (localDate(dayBefore(period.end_utc)) === isoDate) message += ` Завершение: ${localTime(period.end_utc)}; подвести итог и сверить открытые вопросы.`;
+            if (localDate(period.start_utc) === isoDate) message += ` Сегодня начинается ретроградный период: ${localTime(period.start_utc)}. Заканчивается: ${localTime(period.end_utc)}.`;
+            
             output.push(message);
         }
         for (const period of periods.moon_vrischika || []) {
